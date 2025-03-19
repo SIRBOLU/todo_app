@@ -77,9 +77,13 @@ h1 {
     max-width: 300px;
   }
   .Todo p {
-    max-width: 200px;
+    max-width: 220px;
+    font-size: 12px;
   }
   .todo-input {
     max-width: 300px;
+  }
+  .icon {
+    margin-left: 1px;
   }
 }

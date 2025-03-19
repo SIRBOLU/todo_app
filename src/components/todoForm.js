@@ -13,7 +13,7 @@ export const TodoForm = ({ addTodo }) => {
     <form className="TodoForm" onSubmit={handleSubmit}>
       <input
         type="text"
-        maxLength={20}
+        maxLength={18}
         className="todo-input"
         value={value}
         placeholder="What do we have for today"
