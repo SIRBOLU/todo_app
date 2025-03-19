@@ -1,6 +1,7 @@
 // import { TodoWrapper } from "./components/TodoWrapper";
 // import TodoForm from "./components/TodoForm";
 import "./App.css";
+import ".";
 import { TodoWrapper } from "./components/todoWrapper";
 
 function App() {

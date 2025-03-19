@@ -52,3 +52,20 @@ h1 {
 .completed {
   text-decoration: line-through;
 }
+@media (max-width: 500px) {
+  .TodoWrapper {
+    max-width: 400px;
+  }
+  h1 {
+    font-size: 22px;
+  }
+  .TodoForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .todo-input {
+    max-width: 300px;
+  }
+}
