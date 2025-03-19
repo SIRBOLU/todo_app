@@ -52,7 +52,7 @@ h1 {
 .completed {
   text-decoration: line-through;
 }
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   .TodoWrapper {
     max-width: 400px;
   }
@@ -65,15 +65,19 @@ h1 {
     justify-content: center;
     align-items: center;
   }
+
   .cover {
     max-width: 310px;
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
+    justify-content: center;
+    align-items: center;
     margin: 1rem;
   }
   .Todo {
     max-width: 300px;
+  }
+  .Todo p {
+    max-width: 200px;
   }
   .todo-input {
     max-width: 300px;
