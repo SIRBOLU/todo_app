@@ -5,38 +5,40 @@ import "./WelcomeStyle.css";
 const Welcome = () => {
   const navigate = useNavigate();
   return (
-    <div className="welcome">
-      <div>
-        <h1>Welcome to To-Do List</h1>
-        <p>Welcome to your smart to-do list, stay organized</p>
-      </div>
-      <div>
-        <div>
-          <img src="" alt="" />
-          <div>
-            <h3>Create Tasks Quickly and Easily</h3>
-            <p>Input tasks, subtasks and repetitive tasks</p>
-          </div>
+    <div className="container">
+      <div className="welcome">
+        <div className="top">
+          <h1>Welcome to To-Do List</h1>
+          <p>Welcome to your smart to-do list, stay organized always.</p>
         </div>
         <div>
-          <img src="" alt="" />
-          <div>
-            <h3>Task Reminders</h3>
-            <p>Set reminders, and never miss important things</p>
+          <div className="create">
+            <img src="" alt="" />
+            <div>
+              <h4>Create Tasks Quickly and Easily</h4>
+              <p>Input tasks, subtasks and repetitive tasks</p>
+            </div>
+          </div>
+          <div className="reminders">
+            <img src="" alt="" />
+            <div>
+              <h4>Task Reminders</h4>
+              <p>Set reminders, and never miss important things</p>
+            </div>
+          </div>
+          <div className="settings">
+            <img src="" alt="" />
+            <div>
+              <h4>Settings</h4>
+              <p>Select your preferred mode</p>
+            </div>
           </div>
         </div>
-        <div>
-          <img src="" alt="" />
-          <div>
-            <h3>Settings</h3>
-            <p>Select your preferred mode</p>
-          </div>
-        </div>
-      </div>
 
-      <button className="go-to" onClick={() => navigate("/todos")}>
-        Go to Tasks
-      </button>
+        <button className="go-to" onClick={() => navigate("/todos")}>
+          Go to Tasks
+        </button>
+      </div>
     </div>
   );
 };
