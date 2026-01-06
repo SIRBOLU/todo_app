@@ -1,14 +1,18 @@
 // import { TodoWrapper } from "./components/TodoWrapper";
 // import TodoForm from "./components/TodoForm";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import ".";
-import { TodoWrapper } from "./components/todoWrapper";
+import Welcome from "./pages/Welcome";
+import TodoPage from "./pages/TodoPage";
 
 function App() {
   return (
-    <div className="App">
-      <TodoWrapper />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Welcome />} />
+        <Route path="/todos" element={<TodoPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

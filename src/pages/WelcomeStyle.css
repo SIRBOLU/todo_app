@@ -1,0 +1,21 @@
+body {
+  background: linear-gradient(to bottom, #e6f4ff 0%, #f2f9ff 45%, #ffffff 100%);
+  color: #1f2937;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+.go-to {
+  background-color: #38bdf8; /* sky blue */
+  color: #ffffff;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+}
+.go-to:hover {
+  background-color: #1f2937;
+  color: #38bdf8;
+}
+h1 {
+  color: #1f2937;
+}
