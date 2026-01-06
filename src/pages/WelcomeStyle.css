@@ -1,8 +1,7 @@
 body {
-  background: linear-gradient(to bottom, #e6f4ff 0%, #f2f9ff 45%, #ffffff 100%);
-  color: #1f2937;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
+  background: url("./videoframe_4829.png") no-repeat;
 }
 
 .go-to {
