@@ -1,5 +1,7 @@
 // import React from "react";
 import React, { useState } from "react";
+import { faPenClip } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export const EditTodoForm = ({ editTodo, task }) => {
   const [value, setValue] = useState(task.task);
@@ -11,7 +13,7 @@ export const EditTodoForm = ({ editTodo, task }) => {
     setValue("");
   };
   return (
-    <form className="TodoForm" onSubmit={handleSubmit}>
+    <form className="todoForm" onSubmit={handleSubmit}>
       <input
         type="text"
         className="todo-input"
@@ -19,8 +21,8 @@ export const EditTodoForm = ({ editTodo, task }) => {
         placeholder="Update Task"
         onChange={(e) => setValue(e.target.value)}
       />
-      <button type="submit" className="todo-btn">
-        Update Task
+      <button type="submit" className="todo-btn2">
+        <FontAwesomeIcon icon={faPenClip} />
       </button>
     </form>
   );

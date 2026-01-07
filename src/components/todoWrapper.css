@@ -6,17 +6,17 @@ body {
 }
 .todoWrapper {
   height: 100vh;
-  /* width: 100vw; */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  /* max-width: 600px; */
-  /* margin: 0 auto; */
 }
 .todocover {
+  width: 400px;
+  max-width: 92%;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4),
     0 12px 30px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(4px);
   padding: 2rem;
   border-radius: 20px;
   color: #4a2f2a;
@@ -30,22 +30,50 @@ h1 {
   justify-content: space-between;
   align-items: center;
 }
+.todoForm2 {
+  color: red;
+}
 .todo-input {
-  background-color: rgba(255, 255, 255, 0.4), 0 12px 30px rgba(0, 0, 0, 0.12),
-    0 4px 10px rgba(0, 0, 0, 0.08);
+  /* background-color: #f5d4ce;
+  font-size: 1rem;
   padding: 15px;
   width: 17rem;
   margin: 2rem 0;
-  border-radius: 20px;
+  border-radius: 20px; */
+  width: 80%;
+  padding: 12px 14px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(74, 47, 42, 0.2);
+  background: rgba(255, 255, 255, 0.7);
+  margin: 2rem 0;
+  font-size: 1rem;
+  color: #4a2f2a;
+  outline: none;
+  transition: all 0.25s ease;
 }
 .todo-btn {
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4),
-    0 12px 30px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.08);
-  padding: 15px 15px;
-  /* border: aqua solid 2px; */
+  background-color: #f5d4ce;
+  padding: 12px 15px;
+  border: 1px solid rgba(74, 47, 42, 0.2);
+  background: rgba(255, 255, 255, 0.7);
   cursor: pointer;
   font-size: 1rem;
   border-radius: 20px;
+}
+.todo-btn2 {
+  background-color: #f5d4ce;
+  padding: 12px 15px;
+  border: 1px solid rgba(74, 47, 42, 0.2);
+  background: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+.todo-btn2:hover {
+  background-color: #4a2f2a;
+  color: #fff;
 }
 .todo-btn:hover {
   background-color: #4a2f2a;
