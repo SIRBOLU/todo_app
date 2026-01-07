@@ -12,7 +12,7 @@ body {
   text-align: center;
 }
 .todocover {
-  height: 90vh; /* stays within screen */
+  max-height: 90vh; /* stays within screen */
   width: 400px;
 
   display: flex;
