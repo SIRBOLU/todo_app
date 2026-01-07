@@ -90,6 +90,9 @@ export const TodoWrapper = () => {
           ))}
         </div>
       </div>
+      <footer>
+        <p>techlyCoded &copy; 2025</p>
+      </footer>
     </div>
   );
 };

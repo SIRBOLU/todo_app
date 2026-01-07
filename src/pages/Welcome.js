@@ -41,6 +41,9 @@ const Welcome = () => {
           Go to Tasks
         </button>
       </div>
+      <footer>
+        <p>techlyCoded &copy; 2025</p>
+      </footer>
     </div>
   );
 };

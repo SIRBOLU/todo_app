@@ -5,17 +5,25 @@ body {
     0 12px 30px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 .todoWrapper {
+  position: relative;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 10px 0;
 }
 .todocover {
   max-height: 90vh; /* stays within screen */
   width: 400px;
 
   display: flex;
+
   flex-direction: column;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.4),
     0 12px 30px rgba(0, 0, 0, 0.12), 0 4px 10px rgba(0, 0, 0, 0.08);
