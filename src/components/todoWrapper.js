@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { TodoForm } from "./todoForm";
 import { Todo } from "./todo";
 import EditTodoForm from "./EditTodoForm";
+import "./todoWrapper.css";
 
 uuidv4();
 
@@ -55,22 +56,24 @@ export const TodoWrapper = () => {
     );
   };
   return (
-    <div className="TodoWrapper">
-      <h1>Tasks to be caried out!</h1>
-      <TodoForm addTodo={addTodo} />
-      {todos.map((todo, index) =>
-        todo.isEditing ? (
-          <EditTodoForm key={todo.id} editTodo={editTask} task={todo} />
-        ) : (
-          <Todo
-            task={todo}
-            key={index}
-            toggleComplete={toggleComplete}
-            deleteTodo={deleteTodo}
-            editTodo={editTodo}
-          />
-        )
-      )}
+    <div className="todoWrapper">
+      <div className="todocover">
+        <h1>Tasks to be caried out!</h1>
+        <TodoForm addTodo={addTodo} />
+        {todos.map((todo, index) =>
+          todo.isEditing ? (
+            <EditTodoForm key={todo.id} editTodo={editTask} task={todo} />
+          ) : (
+            <Todo
+              task={todo}
+              key={index}
+              toggleComplete={toggleComplete}
+              deleteTodo={deleteTodo}
+              editTodo={editTodo}
+            />
+          )
+        )}
+      </div>
     </div>
   );
 };

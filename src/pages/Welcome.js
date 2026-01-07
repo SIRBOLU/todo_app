@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./WelcomeStyle.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faListCheck, faBell, faGear } from "@fortawesome/free-solid-svg-icons";
 
 const Welcome = () => {
   const navigate = useNavigate();
@@ -13,21 +15,21 @@ const Welcome = () => {
         </div>
         <div>
           <div className="create">
-            <img src="" alt="" />
+            <FontAwesomeIcon icon={faListCheck} />
             <div>
               <h4>Create Tasks Quickly and Easily</h4>
               <p>Input tasks, subtasks and repetitive tasks</p>
             </div>
           </div>
           <div className="reminders">
-            <img src="" alt="" />
+            <FontAwesomeIcon icon={faBell} />
             <div>
               <h4>Task Reminders</h4>
               <p>Set reminders, and never miss important things</p>
             </div>
           </div>
           <div className="settings">
-            <img src="" alt="" />
+            <FontAwesomeIcon icon={faGear} />
             <div>
               <h4>Settings</h4>
               <p>Select your preferred mode</p>
