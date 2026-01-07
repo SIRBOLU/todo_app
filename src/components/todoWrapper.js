@@ -16,7 +16,7 @@ export const TodoWrapper = () => {
     const savedTodos = localStorage.getItem("todos");
     return savedTodos ? JSON.parse(savedTodos) : [];
   });
-
+  const [deletingId, setDeletingId] = useState(null);
   // Save to localStorage whenever todos changes
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -38,8 +38,14 @@ export const TodoWrapper = () => {
     );
   };
   const deleteTodo = (id) => {
-    setTodos(todos.filter((todo) => todo.id !== id));
+    setDeletingId(id);
+
+    setTimeout(() => {
+      setTodos((prev) => prev.filter((todo) => todo.id !== id));
+      setDeletingId(null);
+    }, 350); // matches CSS animation duration
   };
+
   const editTodo = (id) => {
     setTodos(
       todos.map((todo) =>
@@ -59,20 +65,32 @@ export const TodoWrapper = () => {
     <div className="todoWrapper">
       <div className="todocover">
         <h1>Tasks to be caried out!</h1>
+
         <TodoForm addTodo={addTodo} />
-        {todos.map((todo, index) =>
-          todo.isEditing ? (
-            <EditTodoForm key={todo.id} editTodo={editTask} task={todo} />
-          ) : (
-            <Todo
-              task={todo}
-              key={index}
-              toggleComplete={toggleComplete}
-              deleteTodo={deleteTodo}
-              editTodo={editTodo}
-            />
-          )
-        )}
+
+        {/* 👇 Scrollable area */}
+        <div className="todoList">
+          {todos.map((todo, index) => (
+            <div
+              key={todo.id}
+              className={`todo-animate ${
+                deletingId === todo.id ? "collapse" : ""
+              }`}
+              style={{ animationDelay: `${index * 40}ms` }}
+            >
+              {todo.isEditing ? (
+                <EditTodoForm editTodo={editTask} task={todo} />
+              ) : (
+                <Todo
+                  task={todo}
+                  toggleComplete={toggleComplete}
+                  deleteTodo={deleteTodo}
+                  editTodo={editTodo}
+                />
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

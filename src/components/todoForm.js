@@ -18,7 +18,7 @@ export const TodoForm = ({ addTodo }) => {
         maxLength={18}
         className="todo-input"
         value={value}
-        placeholder="What do we have for today"
+        placeholder="Enter task"
         onChange={(e) => setValue(e.target.value)}
       />
       <button type="submit" className="todo-btn">
