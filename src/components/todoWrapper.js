@@ -9,8 +9,6 @@ import "./todoWrapper.css";
 uuidv4();
 
 export const TodoWrapper = () => {
-  // const [todos, setTodos] = useState([]);
-
   // Initialize state from localStorage or empty array
   const [todos, setTodos] = useState(() => {
     const savedTodos = localStorage.getItem("todos");

@@ -37,12 +37,6 @@ h1 {
 }
 
 .todo-input {
-  /* background-color: #f5d4ce;
-  font-size: 1rem;
-  padding: 15px;
-  width: 17rem;
-  margin: 2rem 0;
-  border-radius: 20px; */
   width: 80%;
   padding: 12px 14px;
 
@@ -120,41 +114,7 @@ h1 {
 .completed {
   text-decoration: line-through;
 }
-/* @media (max-width: 600px) {
-  .TodoWrapper {
-    max-width: 400px;
-  }
-  h1 {
-    font-size: 22px;
-  }
-  .TodoForm {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
 
-  .cover {
-    max-width: 310px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-  }
-  .Todo {
-    max-width: 300px;
-  }
-  .Todo p {
-    max-width: 220px;
-    font-size: 12px;
-  }
-  .todo-input {
-    max-width: 300px;
-  }
-  .icon {
-    margin-left: 1px;
-  }
-} */
 /* Scroll stays inside task section */
 .todoList {
   overflow-y: auto;
@@ -211,11 +171,6 @@ h1 {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 @media (max-width: 500px) {
-  /* .todoWrapper {
-    align-items: flex-end;
-    padding: 0;
-  } */
-
   .todocover {
     max-height: 90vh; /* stays within screen */
     width: 380px;
@@ -240,8 +195,4 @@ h1 {
   .TodoForm {
     flex-direction: column;
   }
-
-  /* .todo-btn {
-    width: 100%;
-  } */
 }
